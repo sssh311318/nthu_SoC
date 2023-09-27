@@ -1,6 +1,6 @@
 # Nthu_SoC
 
-This is the repo for some src code of SoC.
+This is the repo for some src code of SoC Lab.
 
 #  Study Journal
 
