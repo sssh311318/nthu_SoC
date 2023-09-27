@@ -1,4 +1,4 @@
-# nthu_SoC
+# Nthu_SoC
 
 This is the repo for some src code of SoC.
 
