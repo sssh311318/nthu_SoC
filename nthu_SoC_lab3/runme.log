@@ -1,0 +1,437 @@
+
+*** Running vivado
+    with args -log fir.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source fir.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/ubuntu/Desktop/nthu_SoC/lab3/vivado/project_1/project_1.srcs/utils_1/imports/synth_1/fir.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/ubuntu/Desktop/nthu_SoC/lab3/vivado/project_1/project_1.srcs/utils_1/imports/synth_1/fir.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top fir -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2831
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 4577 ; free virtual = 7656
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fir' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'fir' (0#1) [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:3]
+WARNING: [Synth 8-6014] Unused sequential element length_reg was removed.  [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:80]
+WARNING: [Synth 8-6014] Unused sequential element fir_ready_reg was removed.  [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:170]
+WARNING: [Synth 8-7137] Register tap_Di_reg in module fir has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:99]
+WARNING: [Synth 8-7137] Register bram_ready_reg in module fir has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:115]
+WARNING: [Synth 8-7137] Register rdata_reg in module fir has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:118]
+WARNING: [Synth 8-7137] Register data_Di_reg in module fir has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:189]
+WARNING: [Synth 8-7137] Register acc_state_reg in module fir has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:238]
+WARNING: [Synth 8-3848] Net sm_tlast in module/entity fir does not have driver. [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:36]
+WARNING: [Synth 8-7129] Port sm_tlast in module fir is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 4627 ; free virtual = 7715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 4630 ; free virtual = 7718
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 4630 ; free virtual = 7718
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2903.078 ; gain = 0.000 ; free physical = 4629 ; free virtual = 7717
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ubuntu/Desktop/nthu_SoC/lab3/vivado/project_1/project_1.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [/home/ubuntu/Desktop/nthu_SoC/lab3/vivado/project_1/project_1.srcs/constrs_1/new/constraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2919.086 ; gain = 0.000 ; free physical = 4541 ; free virtual = 7643
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2919.086 ; gain = 0.000 ; free physical = 4541 ; free virtual = 7643
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4607 ; free virtual = 7709
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4607 ; free virtual = 7709
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4607 ; free virtual = 7709
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4597 ; free virtual = 7702
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 3     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 5     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 42    
+	   3 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP acc_reg1, operation Mode is: A*B.
+DSP Report: operator acc_reg1 is absorbed into DSP acc_reg1.
+DSP Report: operator acc_reg1 is absorbed into DSP acc_reg1.
+DSP Report: Generating DSP acc_reg1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator acc_reg1 is absorbed into DSP acc_reg1.
+DSP Report: operator acc_reg1 is absorbed into DSP acc_reg1.
+DSP Report: Generating DSP acc_reg1, operation Mode is: A*B.
+DSP Report: operator acc_reg1 is absorbed into DSP acc_reg1.
+DSP Report: operator acc_reg1 is absorbed into DSP acc_reg1.
+DSP Report: Generating DSP acc_reg1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator acc_reg1 is absorbed into DSP acc_reg1.
+DSP Report: operator acc_reg1 is absorbed into DSP acc_reg1.
+WARNING: [Synth 8-7129] Port sm_tlast in module fir is either unconnected or has no load
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[31]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[30]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[29]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[28]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[27]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[26]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[25]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[24]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[23]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[22]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[21]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[20]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[19]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[18]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[17]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[16]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[15]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[14]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[13]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[12]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[11]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[10]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[9]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[8]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[7]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[6]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[5]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[4]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'ap_reg[3]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'state_reg[2]__2/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:175]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:175]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:175]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'state_reg[1]__2/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:175]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:175]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:175]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'fir_data_index_reg[1]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:169]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:169]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:169]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'fir_data_index_reg[0]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:169]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:169]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:169]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4584 ; free virtual = 7698
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4473 ; free virtual = 7595
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4451 ; free virtual = 7573
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5966] Removing register instance (\state_reg[0] ) from module (fir) as it has self-loop and (\state_reg[0]__2 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:293]
+INFO: [Synth 8-5966] Removing register instance (\state_reg[0]__0 ) from module (fir) as it has self-loop and (\state_reg[0]__2 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:263]
+INFO: [Synth 8-5966] Removing register instance (\state_reg[0]__1 ) from module (fir) as it has self-loop and (\state_reg[0]__2 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:237]
+INFO: [Synth 8-5966] Removing register instance (\coef_index_reg[0] ) from module (fir) as it has self-loop and (\coef_index_reg[0]__0 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:269]
+INFO: [Synth 8-5966] Removing register instance (\fir_data_index_reg[11] ) from module (fir) as it has self-loop and (\fir_data_index_reg[11]__0 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:270]
+INFO: [Synth 8-5966] Removing register instance (\fir_data_index_reg[10] ) from module (fir) as it has self-loop and (\fir_data_index_reg[10]__0 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:270]
+INFO: [Synth 8-5966] Removing register instance (\fir_data_index_reg[9] ) from module (fir) as it has self-loop and (\fir_data_index_reg[9]__0 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:270]
+INFO: [Synth 8-5966] Removing register instance (\fir_data_index_reg[8] ) from module (fir) as it has self-loop and (\fir_data_index_reg[8]__0 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:270]
+INFO: [Synth 8-5966] Removing register instance (\fir_data_index_reg[7] ) from module (fir) as it has self-loop and (\fir_data_index_reg[7]__0 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:270]
+INFO: [Synth 8-5966] Removing register instance (\fir_data_index_reg[6] ) from module (fir) as it has self-loop and (\fir_data_index_reg[6]__0 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:270]
+INFO: [Synth 8-5966] Removing register instance (\fir_data_index_reg[5] ) from module (fir) as it has self-loop and (\fir_data_index_reg[5]__0 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:270]
+INFO: [Synth 8-5966] Removing register instance (\fir_data_index_reg[4] ) from module (fir) as it has self-loop and (\fir_data_index_reg[4]__0 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:270]
+INFO: [Synth 8-5966] Removing register instance (\fir_data_index_reg[3] ) from module (fir) as it has self-loop and (\fir_data_index_reg[3]__0 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:270]
+INFO: [Synth 8-5966] Removing register instance (\fir_data_index_reg[2] ) from module (fir) as it has self-loop and (\fir_data_index_reg[2]__0 ) is actual driver [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:270]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4451 ; free virtual = 7573
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4451 ; free virtual = 7574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4451 ; free virtual = 7574
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ap[2] with 1st driver pin 'ap_reg[2]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ap[2] with 2nd driver pin 'ap_reg[2]/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:180]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ap[1] with 1st driver pin 'ap_reg[1]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ap[1] with 2nd driver pin 'ap_reg[1]/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:180]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ap[0] with 1st driver pin 'ap_reg[0]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ap[0] with 2nd driver pin 'ap_reg[0]/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:180]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_WE_OBUF[3] with 1st driver pin 'tap_WE_reg[3]__1/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_WE_OBUF[3] with 2nd driver pin 'tap_WE_reg[3]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:206]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_WE_OBUF[3] with 3rd driver pin 'tap_WE_reg[3]/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:244]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_WE_OBUF[2] with 1st driver pin 'tap_WE_reg[2]__1/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_WE_OBUF[2] with 2nd driver pin 'tap_WE_reg[2]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:206]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_WE_OBUF[2] with 3rd driver pin 'tap_WE_reg[2]/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:244]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_WE_OBUF[1] with 1st driver pin 'tap_WE_reg[1]__1/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_WE_OBUF[1] with 2nd driver pin 'tap_WE_reg[1]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:206]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_WE_OBUF[1] with 3rd driver pin 'tap_WE_reg[1]/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:244]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_WE_OBUF[0] with 1st driver pin 'tap_WE_reg[0]__1/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_WE_OBUF[0] with 2nd driver pin 'tap_WE_reg[0]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:206]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_WE_OBUF[0] with 3rd driver pin 'tap_WE_reg[0]/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:244]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_EN_OBUF with 1st driver pin 'tap_EN_reg__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:208]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_EN_OBUF with 2nd driver pin 'tap_EN_reg__1/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:67]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_EN_OBUF with 3rd driver pin 'tap_EN_reg/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:246]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_A_OBUF[11] with 1st driver pin 'tap_A_reg[11]__1/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:98]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_A_OBUF[11] with 2nd driver pin 'tap_A_reg[11]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:207]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_A_OBUF[11] with 3rd driver pin 'tap_A_reg[11]/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:245]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin coef_index[11] with 1st driver pin 'coef_index_reg[11]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:168]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin coef_index[11] with 2nd driver pin 'coef_index_reg[11]/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:269]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_A_OBUF[10] with 1st driver pin 'tap_A_reg[10]__1/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:98]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_A_OBUF[10] with 2nd driver pin 'tap_A_reg[10]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:207]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_A_OBUF[10] with 3rd driver pin 'tap_A_reg[10]/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:245]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin coef_index[10] with 1st driver pin 'coef_index_reg[10]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:168]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin coef_index[10] with 2nd driver pin 'coef_index_reg[10]/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:269]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_A_OBUF[9] with 1st driver pin 'tap_A_reg[9]__1/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:98]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_A_OBUF[9] with 2nd driver pin 'tap_A_reg[9]__0/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:207]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tap_A_OBUF[9] with 3rd driver pin 'tap_A_reg[9]/Q' [/home/ubuntu/Desktop/nthu_SoC/lab3/fir/rtl/fir.v:245]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       48|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4451 ; free virtual = 7574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4451 ; free virtual = 7574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4451 ; free virtual = 7574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4451 ; free virtual = 7574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     6|
+|3     |LUT1   |     4|
+|4     |LUT2   |     5|
+|5     |LUT3   |     7|
+|6     |LUT4   |    30|
+|7     |LUT5   |    14|
+|8     |LUT6   |    24|
+|9     |FDCE   |    53|
+|10    |FDPE   |     2|
+|11    |FDRE   |   189|
+|12    |FDSE   |     3|
+|13    |IBUF   |   128|
+|14    |OBUF   |   168|
+|15    |OBUFT  |     1|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 2919.086 ; gain = 16.008 ; free physical = 4451 ; free virtual = 7574
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 212 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 2919.086 ; gain = 0.000 ; free physical = 4513 ; free virtual = 7636
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 2919.094 ; gain = 16.008 ; free physical = 4513 ; free virtual = 7636
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2919.094 ; gain = 0.000 ; free physical = 4511 ; free virtual = 7634
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2919.094 ; gain = 0.000 ; free physical = 4544 ; free virtual = 7670
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: e69cf304
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 11 Warnings, 133 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2919.094 ; gain = 16.016 ; free physical = 4733 ; free virtual = 7859
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/Desktop/nthu_SoC/lab3/vivado/project_1/project_1.runs/synth_1/fir.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fir_utilization_synth.rpt -pb fir_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 23 10:37:47 2023...
